@@ -13,7 +13,7 @@ jobs:
          - ubuntu-latest
          - windows-latest
          - macos-latest
-         - brain-fuck
+    runs-on: ${{ matrix.os }}     
     steps:
-     - name: say hello to the os
-       eun: echo "Hello from $[{ matrix.os }]"     
+      - name: say hello to the os
+        run: echo "Hello from ${{ matrix.os }}"     
