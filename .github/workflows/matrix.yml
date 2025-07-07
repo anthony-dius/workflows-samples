@@ -1,0 +1,19 @@
+# This is a basic workflow to help you get started with Actions
+
+name: osMatrix
+
+on: 
+  workflow_dispatch
+
+jobs: 
+  message:
+    strategy:
+      matrix:
+        os: 
+         - ubuntu-latest
+         - windows-latest
+         - macos-latest
+         - brain-fuck
+    steps:
+     - name: say hello to the os
+       eun: echo "Hello from $[{ matrix.os }]"     
